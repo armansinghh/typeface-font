@@ -202,6 +202,7 @@ section {
 /* Brutalist Slider */
 input[type="range"] {
   -webkit-appearance: none;
+  appearance: none;
   width: 150px;
   height: 20px;
   background: var(--accent-yellow);
@@ -260,7 +261,7 @@ textarea:focus {
   justify-content: center;
   aspect-ratio: 1;
   border: var(--brutal-border);
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: var(--text-color);
   background-color: var(--card-bg);
   box-shadow: var(--brutal-shadow);
@@ -283,4 +284,141 @@ textarea:focus {
 .char-box:hover {
   transform: translate(4px, 4px);
   box-shadow: var(--brutal-shadow-hover);
+}
+
+/* --- DOWNLOAD SECTION --- */
+.download-section {
+  background-color: var(--accent-pink);
+  border: var(--brutal-border);
+  box-shadow: var(--brutal-shadow);
+  padding: 5rem 2rem;
+  text-align: center;
+  background-image: radial-gradient(rgba(0,0,0,0.2) 2px, transparent 2px);
+  background-size: 20px 20px;
+}
+
+.download-title {
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  -webkit-text-stroke: 1.5px var(--text-color);
+  color: var(--card-bg);
+  text-shadow: 4px 4px 0px var(--border-color);
+}
+
+/* The Massive Brutalist Button */
+.brutal-btn {
+  display: inline-block;
+  background-color: var(--accent-yellow);
+  color: var(--text-color);
+  font-family: inherit;
+  font-weight: 900;
+  text-transform: uppercase;
+  border: var(--brutal-border);
+  box-shadow: 8px 8px 0px 0px var(--border-color);
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.massive-btn {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  padding: 1.5rem 3rem;
+  margin-bottom: 3rem;
+}
+
+.brutal-btn:hover {
+  transform: translate(4px, 4px);
+  box-shadow: 4px 4px 0px 0px var(--border-color);
+  background-color: var(--accent-cyan);
+}
+
+.brutal-btn:active {
+  transform: translate(8px, 8px);
+  box-shadow: 0px 0px 0px 0px var(--border-color);
+}
+
+/* License Box */
+.license-box {
+  background-color: var(--card-bg);
+  border: var(--brutal-border);
+  padding: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  box-shadow: 6px 6px 0px 0px var(--border-color);
+}
+
+.license-box h4 {
+  font-size: 1.25rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  border-bottom: 3px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.license-box p {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* --- FOOTER SECTION --- */
+.brutal-footer {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  border-top: 6px solid var(--accent-cyan);
+  margin-top: 4rem;
+}
+
+.footer-top {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-logo {
+  font-size: 3rem;
+  color: var(--accent-yellow);
+  text-shadow: 4px 4px 0px var(--accent-pink);
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.brutal-link {
+  color: var(--bg-color);
+  text-decoration: none;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.brutal-link:hover {
+  background-color: var(--accent-pink);
+  color: var(--text-color);
+  border: 2px solid var(--text-color);
+  box-shadow: 4px 4px 0px 0px var(--accent-cyan);
+}
+
+.footer-bottom {
+  background-color: #000;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-top: 2px solid #333;
 }
