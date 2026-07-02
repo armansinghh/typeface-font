@@ -1,24 +1,23 @@
 export default function Hero() {
   return (
-    <section style={{ textAlign: 'center', marginBottom: '6rem' }}>
-      <p style={{ textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.875rem', color: 'gray' }}>
-        Introducing
-      </p>
-      <h2 style={{ fontSize: '3rem', marginBottom: '2rem' }}>
-        Boxy Regular
-      </h2>
+    <section className="hero-section">
+      <div className="marquee">
+        <div className="marquee-content">
+          NEW TYPEFACE • BOXY REGULAR • AVAILABLE NOW • FREE TO USE • NEW TYPEFACE • BOXY REGULAR •
+        </div>
+      </div>
       
-      {/* The massive showcase character */}
-      <div 
-        className="font-boxy" 
-        style={{ 
-          fontSize: '25vw', 
-          lineHeight: '1', 
-          color: 'var(--accent-color)',
-          userSelect: 'none'
-        }}
-      >
-        Ag
+      <div className="hero-inner">
+        <div className="badge">
+          100%<br/>RAW
+        </div>
+        <h2 className="hero-title-main">Meet</h2>
+        
+        <div className="font-boxy hero-showcase-massive">
+          Ag
+        </div>
+        
+        <h2 className="hero-title-main hero-title-outline">Boxy</h2>
       </div>
     </section>
   )
