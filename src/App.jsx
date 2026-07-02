@@ -1,11 +1,20 @@
-import { useState } from 'react'
-import './index.css'
+import Hero from './components/Hero'
+import TypeTester from './components/TypeTester'
+import CharacterMap from './components/CharMap'
 
 function App() {
   return (
-    <>
-      <h1 className="font-boxy">Hello World</h1>
-    </>
+    <div className="container">
+      <header>
+        <h1>Boxy Foundry.</h1>
+      </header>
+      
+      <main>
+        <Hero />
+        <TypeTester />
+        <CharacterMap />
+      </main>
+    </div>
   )
 }
 
