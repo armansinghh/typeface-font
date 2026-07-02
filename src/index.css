@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "Boxy";
+  src: url("/font/Boxy-Regular.otf") format("opentype");
+}
+
+.font-boxy {
+  font-family: "Boxy", sans-serif;
+}
