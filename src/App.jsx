@@ -12,9 +12,6 @@ function App() {
       <Navbar />
       <div className="container">
         <main>
-          <header>
-            <h1>Boxy Foundry.</h1>
-          </header>
           <Hero />
           <TypeTester />
           <CharacterMap />

@@ -5,11 +5,10 @@ export default function Navbar() {
     ]
 
     return (
-        <nav className="sticky top-0 z-50 flex items-stretch justify-between bg-[#0d1117] border-b border-(--border-color)">
+        <nav className="sticky top-0 z-50 flex items-stretch justify-between bg-(--bg-color) border-b border-(--border-color)">
             <div className="flex flex-1 items-center justify-between p-3">
 
-                <a href="#top" className="font-boxy text-6xl pt-1.5 pl-2 text-(--text)
-                                 tracking-wide select-none">
+                <a href="#top" className="font-boxy text-6xl pt-1.5 pl-2 text-(--text-white) tracking-wide select-none">
                     BOXY FOUNDRY
                 </a>
 
