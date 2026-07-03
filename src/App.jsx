@@ -10,14 +10,12 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="container">
         <main>
           <Hero />
           <TypeTester />
           <CharacterMap />
           <Download />
         </main>
-      </div>
       <Footer />
     </>
   )
