@@ -1,11 +1,23 @@
+import { useState } from "react";
+
 export default function Download() {
+  const [format, setFormat] = useState("otf");
+  const fileInfo = {
+    otf: {
+      size: "40KB",
+    },
+    ttf: {
+      size: "14KB",
+    },
+  };
+
   return (
     <section
       id="download"
       className="relative w-full bg-(--bg-color)/65 border-y border-(--border-color) py-16 md:py-24 overflow-hidden"
     >
-
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 z-10">
+      <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
+        {/* Heading */}
         <div className="mb-10">
           <div className="flex items-end gap-2 select-none">
             <span className="font-boxy pt-1 text-5xl md:text-6xl text-(--text-white)">
@@ -23,35 +35,36 @@ export default function Download() {
         </div>
 
         <div className="flex flex-col border-2 border-(--border-color) bg-(--bg-color)">
-          <div className="hidden md:grid md:grid-cols-4 divide-x border-b border-(--border-color) divide-(--border-color)">
-            <div className="flex items-center justify-center bg-(--accent-green) p-3 md:p-4">
-              <span className="font-archivo text-xs md:text-sm font-black uppercase text-black">
-                Release: 1.0
-              </span>
-            </div>
-
-            <div className="flex items-center justify-center bg-(--accent-green) p-3 md:p-4">
-              <span className="font-archivo text-xs md:text-sm font-black uppercase text-black">
-                Format: .OTF
-              </span>
-            </div>
-
-            <div className="hidden md:flex items-center justify-center bg-(--accent-green) p-4">
+          {/* Desktop Info Bar */}
+          <div className="hidden md:grid md:grid-cols-4 divide-x divide-(--border-color) border-b border-(--border-color)">
+            <div className="flex items-center justify-center bg-(--accent-green) p-4">
               <span className="font-archivo text-sm font-black uppercase text-black">
-                Size: 42KB
+                Release: 2.0.0
               </span>
             </div>
 
-            <div className="flex items-center justify-center bg-(--accent-green) p-3 md:p-4">
-              <span className="font-archivo text-xs md:text-sm font-black uppercase text-black">
+            <div className="flex items-center justify-center bg-(--accent-green) p-4">
+              <span className="font-archivo text-sm font-black uppercase text-black">
+                Format: .{format.toUpperCase()}
+              </span>
+            </div>
+
+            <div className="flex items-center justify-center bg-(--accent-green) p-4">
+              <span className="font-archivo text-sm font-black uppercase text-black">
+                Size: {fileInfo[format].size}
+              </span>
+            </div>
+
+            <div className="flex items-center justify-center bg-(--accent-green) p-4">
+              <span className="font-archivo text-sm font-black uppercase text-black">
                 Status: Free
               </span>
             </div>
           </div>
 
-          {/* body */}
+          {/* Body */}
           <div className="flex flex-col items-center p-8 text-center md:p-16">
-            <h2 className="mb-2 font-boxy text-5xl md:text-7xl font-black tracking-wide select-none">
+            <h2 className="mb-2 select-none font-boxy text-5xl font-black uppercase tracking-wide md:text-7xl">
               <span className="text-(--accent-cyan)">B</span>
               <span className="text-(--accent-yellow)">O</span>
               <span className="text-(--accent-pink)">X</span>
@@ -66,17 +79,42 @@ export default function Download() {
               <span className="text-(--accent-yellow)">R</span>
             </h2>
 
-            <p className="mb-10 md:mb-14 font-archivo font-bold uppercase tracking-widest text-(--text-white)/60">
-              Ready for extraction
+            <p className="mb-8 font-archivo font-bold uppercase tracking-widest text-(--text-white)/60">
+              Choose your preferred format
             </p>
 
+            <div className="mb-10 inline-flex overflow-hidden border-2 border-(--border-color)">
+              <button
+                onClick={() => setFormat("otf")}
+                className={`px-8 py-3 font-archivo text-sm font-black uppercase tracking-[0.25em] transition-colors ${format === "otf"
+                  ? "bg-(--accent-yellow) text-black"
+                  : "bg-(--bg-color) text-(--text-white) hover:bg-white/10"
+                  }`}
+              >
+                OTF
+              </button>
+
+              <button
+                onClick={() => setFormat("ttf")}
+                className={`border-l border-(--border-color) px-8 py-3 font-archivo text-sm font-black uppercase tracking-[0.25em] transition-colors ${format === "ttf"
+                  ? "bg-(--accent-cyan) text-black"
+                  : "bg-(--bg-color) text-(--text-white) hover:bg-white/10"
+                  }`}
+              >
+                TTF
+              </button>
+            </div>
+
             <a
-              href="/font/Boxy-Regular.otf"
-              download="Boxy-Regular.otf"
-              className="group inline-flex w-full items-center justify-center border-2 border-(--border-color) bg-(--accent-green) px-8 py-6 font-archivo text-2xl font-black uppercase text-black transition-all duration-100 hover:bg-(--accent-cyan) hover:-translate-y-1 md:w-auto md:px-12 md:py-8 md:text-4xl"
+              href={`/font/Boxy-Regular.${format}`}
+              download={`Boxy-Regular.${format}`}
+              className={`group inline-flex w-full sm:w-auto items-center justify-center border-2 border-(--border-color)
+                          bg-(--accent-green) px-6 py-4 font-archivo text-lg sm:text-xl md:text-4xl font-black 
+                          uppercase text-black ${format === "otf" ? "hover:bg-(--accent-yellow)" : "hover:bg-(--accent-cyan)"}
+                          sm:px-8 sm:py-5 md:px-12 md:py-8`}
             >
               <span className="flex items-center gap-4">
-                Download Font
+                Download {format.toUpperCase()}
 
                 <svg
                   className="h-8 w-8 transition-transform group-hover:translate-y-1 md:h-10 md:w-10"
@@ -95,8 +133,7 @@ export default function Download() {
             </a>
           </div>
 
-          {/* license */}
-          <div className="flex flex-col divide-y border-t border-(--border-color) bg-black/5 md:flex-row md:divide-x md:divide-y-0 divide-(--border-color)">
+          <div className="flex flex-col divide-y divide-(--border-color) border-t border-(--border-color) bg-black/5 md:flex-row md:divide-x md:divide-y-0">
             <div className="flex items-center p-6 md:w-1/3 md:p-8">
               <h4 className="font-archivo text-xl font-black uppercase text-(--text-white)">
                 End User License
