@@ -63,30 +63,22 @@ body {
   }
 }
 
+/* custom scrollbar to match the theme */
 ::-webkit-scrollbar {
   width: 12px;
-  /* Width of vertical scrollbar */
   height: 12px;
-  /* Height of horizontal scrollbar */
   background-color: #000000;
-  /* Match your heavy black accents */
 }
 
-/* 2. Style the draggable handle (the thumb) */
 ::-webkit-scrollbar-thumb {
   background-color: var(--border-color);
-  /* Uses your custom theme border color */
   border: 2px solid #000000;
-  /* Creates a sharp gap around the thumb */
 }
 
-/* 3. Change color when user hovers over the scrollbar handle */
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--accent-cyan);
-  /* Flashes cyan on hover */
 }
 
-/* 4. Nuke the arrow buttons entirely */
 ::-webkit-scrollbar-button {
   display: none !important;
   width: 0 !important;
