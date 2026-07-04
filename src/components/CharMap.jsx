@@ -4,7 +4,7 @@ export default function CharacterMap() {
   const [expanded, setExpanded] = useState(false);
 
   const chars =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!?@#%&*()".split(
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!?@#$%&*()".split(
       ""
     );
 
