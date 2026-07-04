@@ -4,7 +4,6 @@ export default function Download() {
       id="download"
       className="relative w-full bg-(--bg-color)/65 border-y border-(--border-color) py-16 md:py-24 overflow-hidden"
     >
-      <div className="absolute inset-0 pointer-events-none opacity-40 bg-[radial-gradient(var(--border-color)_2px,transparent_2px)] bg-size-[20px_20px]" />
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 z-10">
         <div className="mb-10">
