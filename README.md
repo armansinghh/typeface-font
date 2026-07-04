@@ -1,6 +1,6 @@
 # Boxy Foundry
 
-Built this for a typography challenge. The goal was to draw a custom font from scratch and then build a website that actually does it justice.
+Built this for a typography challenge. The goal was to draw a custom font from scratch and then build a website that actually represents it well.
 
 Meet **Boxy Regular** a raw, geometric typeface I mapped out using Caligraphr.
 
@@ -8,15 +8,15 @@ Instead of a boring, standard corporate typography site, I went full Neo-Brutali
 
 ## what's inside?
 
-* **Massive Hero Section:** Complete with a scrolling CSS marquee and a floating sticker badge.
-* **Live Type Tester:** A fully interactive text area where you can type your own stuff and scale the font size up and down to see how it handles.
-* **Character Map:** A chaotic CSS grid showing off every single glyph, number, and symbol in the font.
-* **Direct Download:** A chunky button to grab the raw `.otf` file.
+* **Massive Hero Section:** complete with a scrolling CSS marquee and a floating sticker badge (removed for now).
+* **Live Type Tester:** fully interactive text area where you can type your own stuff and tweak size, leading, and tracking to see how it handles
+* **Character Map:** CSS grid showing off glyph, number, and symbol in the font (not complete)
+* **Direct Download:** grab the raw `.otf`/`.ttf` file
 
 ## tech stack
 
 * **React** (with Vite)
-* **Vanilla CSS** (No Tailwind, no component libraries. Just raw CSS custom properties and brutalist styling).
+* **Tailwind CSS v4** for utility styling, layered on top of raw CSS custom properties for the brutalist theming (borders, shadows, colors).
 
 ## running it locally
 
